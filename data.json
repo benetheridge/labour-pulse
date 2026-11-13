@@ -1,0 +1,1585 @@
+{
+ "sample": true,
+ "updated": "2026-11-11T09:54+00:00",
+ "ons": {
+  "series": [
+   {
+    "id": "MGSX",
+    "label": "Unemployment rate (16+)",
+    "unit": "%",
+    "good": "down",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 4.2
+    },
+    "change": -0.1,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 4.2
+     },
+     {
+      "period": "2023 Oct",
+      "value": 4.2
+     },
+     {
+      "period": "2023 Nov",
+      "value": 4.2
+     },
+     {
+      "period": "2023 Dec",
+      "value": 4.2
+     },
+     {
+      "period": "2024 Jan",
+      "value": 4.2
+     },
+     {
+      "period": "2024 Feb",
+      "value": 4.2
+     },
+     {
+      "period": "2024 Mar",
+      "value": 4.1
+     },
+     {
+      "period": "2024 Apr",
+      "value": 4.1
+     },
+     {
+      "period": "2024 May",
+      "value": 4.1
+     },
+     {
+      "period": "2024 Jun",
+      "value": 4.1
+     },
+     {
+      "period": "2024 Jul",
+      "value": 4.1
+     },
+     {
+      "period": "2024 Aug",
+      "value": 4.0
+     },
+     {
+      "period": "2024 Sep",
+      "value": 4.0
+     },
+     {
+      "period": "2024 Oct",
+      "value": 4.1
+     },
+     {
+      "period": "2024 Nov",
+      "value": 4.0
+     },
+     {
+      "period": "2024 Dec",
+      "value": 4.0
+     },
+     {
+      "period": "2025 Jan",
+      "value": 4.1
+     },
+     {
+      "period": "2025 Feb",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Mar",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Apr",
+      "value": 4.2
+     },
+     {
+      "period": "2025 May",
+      "value": 4.3
+     },
+     {
+      "period": "2025 Jun",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Jul",
+      "value": 4.3
+     },
+     {
+      "period": "2025 Aug",
+      "value": 4.3
+     },
+     {
+      "period": "2025 Sep",
+      "value": 4.3
+     },
+     {
+      "period": "2025 Oct",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Nov",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Dec",
+      "value": 4.3
+     },
+     {
+      "period": "2026 Jan",
+      "value": 4.2
+     },
+     {
+      "period": "2026 Feb",
+      "value": 4.3
+     },
+     {
+      "period": "2026 Mar",
+      "value": 4.3
+     },
+     {
+      "period": "2026 Apr",
+      "value": 4.3
+     },
+     {
+      "period": "2026 May",
+      "value": 4.4
+     },
+     {
+      "period": "2026 Jun",
+      "value": 4.3
+     },
+     {
+      "period": "2026 Jul",
+      "value": 4.3
+     },
+     {
+      "period": "2026 Aug",
+      "value": 4.2
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   },
+   {
+    "id": "LF24",
+    "label": "Employment rate (16-64)",
+    "unit": "%",
+    "good": "up",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 75.1
+    },
+    "change": 0.0,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 75.1
+     },
+     {
+      "period": "2023 Oct",
+      "value": 75.1
+     },
+     {
+      "period": "2023 Nov",
+      "value": 75.1
+     },
+     {
+      "period": "2023 Dec",
+      "value": 75.1
+     },
+     {
+      "period": "2024 Jan",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Feb",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Mar",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Apr",
+      "value": 75.1
+     },
+     {
+      "period": "2024 May",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Jun",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Jul",
+      "value": 75.0
+     },
+     {
+      "period": "2024 Aug",
+      "value": 75.1
+     },
+     {
+      "period": "2024 Sep",
+      "value": 75.1
+     },
+     {
+      "period": "2024 Oct",
+      "value": 75.1
+     },
+     {
+      "period": "2024 Nov",
+      "value": 75.2
+     },
+     {
+      "period": "2024 Dec",
+      "value": 75.1
+     },
+     {
+      "period": "2025 Jan",
+      "value": 75.1
+     },
+     {
+      "period": "2025 Feb",
+      "value": 75.1
+     },
+     {
+      "period": "2025 Mar",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Apr",
+      "value": 75.0
+     },
+     {
+      "period": "2025 May",
+      "value": 74.9
+     },
+     {
+      "period": "2025 Jun",
+      "value": 74.9
+     },
+     {
+      "period": "2025 Jul",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Aug",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Sep",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Oct",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Nov",
+      "value": 75.0
+     },
+     {
+      "period": "2025 Dec",
+      "value": 75.0
+     },
+     {
+      "period": "2026 Jan",
+      "value": 75.1
+     },
+     {
+      "period": "2026 Feb",
+      "value": 75.0
+     },
+     {
+      "period": "2026 Mar",
+      "value": 75.1
+     },
+     {
+      "period": "2026 Apr",
+      "value": 75.2
+     },
+     {
+      "period": "2026 May",
+      "value": 75.2
+     },
+     {
+      "period": "2026 Jun",
+      "value": 75.2
+     },
+     {
+      "period": "2026 Jul",
+      "value": 75.1
+     },
+     {
+      "period": "2026 Aug",
+      "value": 75.1
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   },
+   {
+    "id": "AP2Y",
+    "label": "Vacancies",
+    "unit": "k",
+    "good": "up",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 689.0
+    },
+    "change": -8.0,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 948.0
+     },
+     {
+      "period": "2023 Oct",
+      "value": 953.0
+     },
+     {
+      "period": "2023 Nov",
+      "value": 955.0
+     },
+     {
+      "period": "2023 Dec",
+      "value": 944.0
+     },
+     {
+      "period": "2024 Jan",
+      "value": 935.0
+     },
+     {
+      "period": "2024 Feb",
+      "value": 933.0
+     },
+     {
+      "period": "2024 Mar",
+      "value": 916.0
+     },
+     {
+      "period": "2024 Apr",
+      "value": 909.0
+     },
+     {
+      "period": "2024 May",
+      "value": 895.0
+     },
+     {
+      "period": "2024 Jun",
+      "value": 880.0
+     },
+     {
+      "period": "2024 Jul",
+      "value": 863.0
+     },
+     {
+      "period": "2024 Aug",
+      "value": 864.0
+     },
+     {
+      "period": "2024 Sep",
+      "value": 849.0
+     },
+     {
+      "period": "2024 Oct",
+      "value": 837.0
+     },
+     {
+      "period": "2024 Nov",
+      "value": 828.0
+     },
+     {
+      "period": "2024 Dec",
+      "value": 831.0
+     },
+     {
+      "period": "2025 Jan",
+      "value": 815.0
+     },
+     {
+      "period": "2025 Feb",
+      "value": 808.0
+     },
+     {
+      "period": "2025 Mar",
+      "value": 803.0
+     },
+     {
+      "period": "2025 Apr",
+      "value": 806.0
+     },
+     {
+      "period": "2025 May",
+      "value": 808.0
+     },
+     {
+      "period": "2025 Jun",
+      "value": 810.0
+     },
+     {
+      "period": "2025 Jul",
+      "value": 799.0
+     },
+     {
+      "period": "2025 Aug",
+      "value": 791.0
+     },
+     {
+      "period": "2025 Sep",
+      "value": 782.0
+     },
+     {
+      "period": "2025 Oct",
+      "value": 785.0
+     },
+     {
+      "period": "2025 Nov",
+      "value": 790.0
+     },
+     {
+      "period": "2025 Dec",
+      "value": 775.0
+     },
+     {
+      "period": "2026 Jan",
+      "value": 762.0
+     },
+     {
+      "period": "2026 Feb",
+      "value": 749.0
+     },
+     {
+      "period": "2026 Mar",
+      "value": 737.0
+     },
+     {
+      "period": "2026 Apr",
+      "value": 731.0
+     },
+     {
+      "period": "2026 May",
+      "value": 727.0
+     },
+     {
+      "period": "2026 Jun",
+      "value": 715.0
+     },
+     {
+      "period": "2026 Jul",
+      "value": 697.0
+     },
+     {
+      "period": "2026 Aug",
+      "value": 689.0
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   },
+   {
+    "id": "KAC3",
+    "label": "Pay growth (total, 3m y/y)",
+    "unit": "%",
+    "good": "up",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 2.9
+    },
+    "change": 0.1,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 7.3
+     },
+     {
+      "period": "2023 Oct",
+      "value": 7.3
+     },
+     {
+      "period": "2023 Nov",
+      "value": 7.4
+     },
+     {
+      "period": "2023 Dec",
+      "value": 7.3
+     },
+     {
+      "period": "2024 Jan",
+      "value": 7.2
+     },
+     {
+      "period": "2024 Feb",
+      "value": 7.2
+     },
+     {
+      "period": "2024 Mar",
+      "value": 7.2
+     },
+     {
+      "period": "2024 Apr",
+      "value": 6.9
+     },
+     {
+      "period": "2024 May",
+      "value": 6.9
+     },
+     {
+      "period": "2024 Jun",
+      "value": 6.9
+     },
+     {
+      "period": "2024 Jul",
+      "value": 7.0
+     },
+     {
+      "period": "2024 Aug",
+      "value": 7.0
+     },
+     {
+      "period": "2024 Sep",
+      "value": 6.9
+     },
+     {
+      "period": "2024 Oct",
+      "value": 6.7
+     },
+     {
+      "period": "2024 Nov",
+      "value": 6.5
+     },
+     {
+      "period": "2024 Dec",
+      "value": 6.4
+     },
+     {
+      "period": "2025 Jan",
+      "value": 6.2
+     },
+     {
+      "period": "2025 Feb",
+      "value": 5.9
+     },
+     {
+      "period": "2025 Mar",
+      "value": 5.7
+     },
+     {
+      "period": "2025 Apr",
+      "value": 5.4
+     },
+     {
+      "period": "2025 May",
+      "value": 5.3
+     },
+     {
+      "period": "2025 Jun",
+      "value": 5.0
+     },
+     {
+      "period": "2025 Jul",
+      "value": 4.7
+     },
+     {
+      "period": "2025 Aug",
+      "value": 4.4
+     },
+     {
+      "period": "2025 Sep",
+      "value": 4.2
+     },
+     {
+      "period": "2025 Oct",
+      "value": 4.0
+     },
+     {
+      "period": "2025 Nov",
+      "value": 3.7
+     },
+     {
+      "period": "2025 Dec",
+      "value": 3.8
+     },
+     {
+      "period": "2026 Jan",
+      "value": 3.7
+     },
+     {
+      "period": "2026 Feb",
+      "value": 3.5
+     },
+     {
+      "period": "2026 Mar",
+      "value": 3.3
+     },
+     {
+      "period": "2026 Apr",
+      "value": 3.1
+     },
+     {
+      "period": "2026 May",
+      "value": 3.0
+     },
+     {
+      "period": "2026 Jun",
+      "value": 2.7
+     },
+     {
+      "period": "2026 Jul",
+      "value": 2.8
+     },
+     {
+      "period": "2026 Aug",
+      "value": 2.9
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   },
+   {
+    "id": "A3WW",
+    "label": "Real pay growth (3m y/y)",
+    "unit": "%",
+    "good": "up",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 0.8
+    },
+    "change": -0.2,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 1.0
+     },
+     {
+      "period": "2023 Oct",
+      "value": 1.0
+     },
+     {
+      "period": "2023 Nov",
+      "value": 0.8
+     },
+     {
+      "period": "2023 Dec",
+      "value": 0.6
+     },
+     {
+      "period": "2024 Jan",
+      "value": 0.5
+     },
+     {
+      "period": "2024 Feb",
+      "value": 0.4
+     },
+     {
+      "period": "2024 Mar",
+      "value": 0.5
+     },
+     {
+      "period": "2024 Apr",
+      "value": 0.4
+     },
+     {
+      "period": "2024 May",
+      "value": 0.1
+     },
+     {
+      "period": "2024 Jun",
+      "value": 0.4
+     },
+     {
+      "period": "2024 Jul",
+      "value": 0.4
+     },
+     {
+      "period": "2024 Aug",
+      "value": 0.2
+     },
+     {
+      "period": "2024 Sep",
+      "value": 0.2
+     },
+     {
+      "period": "2024 Oct",
+      "value": -0.0
+     },
+     {
+      "period": "2024 Nov",
+      "value": -0.0
+     },
+     {
+      "period": "2024 Dec",
+      "value": 0.2
+     },
+     {
+      "period": "2025 Jan",
+      "value": 0.4
+     },
+     {
+      "period": "2025 Feb",
+      "value": 0.5
+     },
+     {
+      "period": "2025 Mar",
+      "value": 0.4
+     },
+     {
+      "period": "2025 Apr",
+      "value": 0.3
+     },
+     {
+      "period": "2025 May",
+      "value": 0.2
+     },
+     {
+      "period": "2025 Jun",
+      "value": 0.3
+     },
+     {
+      "period": "2025 Jul",
+      "value": 0.3
+     },
+     {
+      "period": "2025 Aug",
+      "value": 0.4
+     },
+     {
+      "period": "2025 Sep",
+      "value": 0.4
+     },
+     {
+      "period": "2025 Oct",
+      "value": 0.2
+     },
+     {
+      "period": "2025 Nov",
+      "value": 0.4
+     },
+     {
+      "period": "2025 Dec",
+      "value": 0.6
+     },
+     {
+      "period": "2026 Jan",
+      "value": 0.8
+     },
+     {
+      "period": "2026 Feb",
+      "value": 1.0
+     },
+     {
+      "period": "2026 Mar",
+      "value": 1.1
+     },
+     {
+      "period": "2026 Apr",
+      "value": 1.2
+     },
+     {
+      "period": "2026 May",
+      "value": 1.1
+     },
+     {
+      "period": "2026 Jun",
+      "value": 1.1
+     },
+     {
+      "period": "2026 Jul",
+      "value": 1.0
+     },
+     {
+      "period": "2026 Aug",
+      "value": 0.8
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   },
+   {
+    "id": "LF2S",
+    "label": "Inactivity rate (16-64)",
+    "unit": "%",
+    "good": "down",
+    "latest": {
+     "period": "2026 Aug",
+     "value": 22.3
+    },
+    "change": -0.1,
+    "history": [
+     {
+      "period": "2023 Sep",
+      "value": 21.7
+     },
+     {
+      "period": "2023 Oct",
+      "value": 21.7
+     },
+     {
+      "period": "2023 Nov",
+      "value": 21.6
+     },
+     {
+      "period": "2023 Dec",
+      "value": 21.7
+     },
+     {
+      "period": "2024 Jan",
+      "value": 21.7
+     },
+     {
+      "period": "2024 Feb",
+      "value": 21.7
+     },
+     {
+      "period": "2024 Mar",
+      "value": 21.8
+     },
+     {
+      "period": "2024 Apr",
+      "value": 21.9
+     },
+     {
+      "period": "2024 May",
+      "value": 22.0
+     },
+     {
+      "period": "2024 Jun",
+      "value": 22.0
+     },
+     {
+      "period": "2024 Jul",
+      "value": 21.9
+     },
+     {
+      "period": "2024 Aug",
+      "value": 21.9
+     },
+     {
+      "period": "2024 Sep",
+      "value": 21.8
+     },
+     {
+      "period": "2024 Oct",
+      "value": 21.8
+     },
+     {
+      "period": "2024 Nov",
+      "value": 21.8
+     },
+     {
+      "period": "2024 Dec",
+      "value": 21.9
+     },
+     {
+      "period": "2025 Jan",
+      "value": 21.9
+     },
+     {
+      "period": "2025 Feb",
+      "value": 21.9
+     },
+     {
+      "period": "2025 Mar",
+      "value": 22.0
+     },
+     {
+      "period": "2025 Apr",
+      "value": 22.0
+     },
+     {
+      "period": "2025 May",
+      "value": 21.9
+     },
+     {
+      "period": "2025 Jun",
+      "value": 22.0
+     },
+     {
+      "period": "2025 Jul",
+      "value": 22.0
+     },
+     {
+      "period": "2025 Aug",
+      "value": 22.1
+     },
+     {
+      "period": "2025 Sep",
+      "value": 22.1
+     },
+     {
+      "period": "2025 Oct",
+      "value": 22.1
+     },
+     {
+      "period": "2025 Nov",
+      "value": 22.1
+     },
+     {
+      "period": "2025 Dec",
+      "value": 22.1
+     },
+     {
+      "period": "2026 Jan",
+      "value": 22.1
+     },
+     {
+      "period": "2026 Feb",
+      "value": 22.2
+     },
+     {
+      "period": "2026 Mar",
+      "value": 22.3
+     },
+     {
+      "period": "2026 Apr",
+      "value": 22.2
+     },
+     {
+      "period": "2026 May",
+      "value": 22.2
+     },
+     {
+      "period": "2026 Jun",
+      "value": 22.3
+     },
+     {
+      "period": "2026 Jul",
+      "value": 22.4
+     },
+     {
+      "period": "2026 Aug",
+      "value": 22.3
+     }
+    ],
+    "source": "https://www.ons.gov.uk"
+   }
+  ],
+  "next_release": "17 November 2026"
+ },
+ "adzuna": {
+  "terms": [
+   "AI",
+   "LLM",
+   "ChatGPT",
+   "GenAI",
+   "Copilot"
+  ],
+  "total": 1050000,
+  "ai": 44730,
+  "share": 4.26,
+  "regions": [
+   {
+    "name": "London",
+    "total": 260000,
+    "ai": 16510,
+    "share": 6.35
+   },
+   {
+    "name": "South East England",
+    "total": 59623,
+    "ai": 3690,
+    "share": 6.19
+   },
+   {
+    "name": "Eastern England",
+    "total": 141989,
+    "ai": 8405,
+    "share": 5.92
+   },
+   {
+    "name": "Scotland",
+    "total": 58318,
+    "ai": 3201,
+    "share": 5.49
+   },
+   {
+    "name": "North West England",
+    "total": 176203,
+    "ai": 9321,
+    "share": 5.29
+   },
+   {
+    "name": "South West England",
+    "total": 192298,
+    "ai": 9461,
+    "share": 4.92
+   },
+   {
+    "name": "West Midlands",
+    "total": 60871,
+    "ai": 2690,
+    "share": 4.42
+   },
+   {
+    "name": "Yorkshire And The Humber",
+    "total": 54336,
+    "ai": 2097,
+    "share": 3.86
+   },
+   {
+    "name": "East Midlands",
+    "total": 210413,
+    "ai": 7911,
+    "share": 3.76
+   },
+   {
+    "name": "Wales",
+    "total": 158040,
+    "ai": 5452,
+    "share": 3.45
+   },
+   {
+    "name": "North East England",
+    "total": 56503,
+    "ai": 1678,
+    "share": 2.97
+   },
+   {
+    "name": "Northern Ireland",
+    "total": 71067,
+    "ai": 1975,
+    "share": 2.78
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08-14",
+    "share": 3.57,
+    "ai": 37485,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-15",
+    "share": 3.61,
+    "ai": 37905,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-16",
+    "share": 3.64,
+    "ai": 38220,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-17",
+    "share": 3.66,
+    "ai": 38430,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-18",
+    "share": 3.73,
+    "ai": 39165,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-19",
+    "share": 3.72,
+    "ai": 39060,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-20",
+    "share": 3.75,
+    "ai": 39375,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-21",
+    "share": 3.74,
+    "ai": 39270,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-22",
+    "share": 3.83,
+    "ai": 40215,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-23",
+    "share": 3.79,
+    "ai": 39795,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-24",
+    "share": 3.81,
+    "ai": 40005,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-25",
+    "share": 3.82,
+    "ai": 40110,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-26",
+    "share": 3.85,
+    "ai": 40425,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-27",
+    "share": 3.79,
+    "ai": 39795,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-28",
+    "share": 3.83,
+    "ai": 40215,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-29",
+    "share": 3.78,
+    "ai": 39690,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-30",
+    "share": 3.77,
+    "ai": 39585,
+    "total": 1050000
+   },
+   {
+    "date": "2026-08-31",
+    "share": 3.75,
+    "ai": 39375,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-01",
+    "share": 3.68,
+    "ai": 38640,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-02",
+    "share": 3.7,
+    "ai": 38850,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-03",
+    "share": 3.66,
+    "ai": 38430,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-04",
+    "share": 3.62,
+    "ai": 38010,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-05",
+    "share": 3.69,
+    "ai": 38745,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-06",
+    "share": 3.61,
+    "ai": 37905,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-07",
+    "share": 3.63,
+    "ai": 38115,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-08",
+    "share": 3.64,
+    "ai": 38220,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-09",
+    "share": 3.62,
+    "ai": 38010,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-10",
+    "share": 3.6,
+    "ai": 37800,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-11",
+    "share": 3.62,
+    "ai": 38010,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-12",
+    "share": 3.63,
+    "ai": 38115,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-13",
+    "share": 3.66,
+    "ai": 38430,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-14",
+    "share": 3.61,
+    "ai": 37905,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-15",
+    "share": 3.68,
+    "ai": 38640,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-16",
+    "share": 3.67,
+    "ai": 38535,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-17",
+    "share": 3.69,
+    "ai": 38745,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-18",
+    "share": 3.77,
+    "ai": 39585,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-19",
+    "share": 3.77,
+    "ai": 39585,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-20",
+    "share": 3.81,
+    "ai": 40005,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-21",
+    "share": 3.86,
+    "ai": 40530,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-22",
+    "share": 3.91,
+    "ai": 41055,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-23",
+    "share": 3.89,
+    "ai": 40845,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-24",
+    "share": 3.94,
+    "ai": 41370,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-25",
+    "share": 3.95,
+    "ai": 41475,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-26",
+    "share": 3.98,
+    "ai": 41790,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-27",
+    "share": 4.01,
+    "ai": 42105,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-28",
+    "share": 4.01,
+    "ai": 42105,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-29",
+    "share": 4.03,
+    "ai": 42315,
+    "total": 1050000
+   },
+   {
+    "date": "2026-09-30",
+    "share": 4.03,
+    "ai": 42315,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-01",
+    "share": 4.08,
+    "ai": 42840,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-02",
+    "share": 4.06,
+    "ai": 42630,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-03",
+    "share": 4.07,
+    "ai": 42735,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-04",
+    "share": 4.07,
+    "ai": 42735,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-05",
+    "share": 3.99,
+    "ai": 41895,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-06",
+    "share": 4.01,
+    "ai": 42105,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-07",
+    "share": 4.03,
+    "ai": 42315,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-08",
+    "share": 4.0,
+    "ai": 42000,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-09",
+    "share": 3.91,
+    "ai": 41055,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-10",
+    "share": 3.89,
+    "ai": 40845,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-11",
+    "share": 3.91,
+    "ai": 41055,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-12",
+    "share": 3.85,
+    "ai": 40425,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-13",
+    "share": 3.85,
+    "ai": 40425,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-14",
+    "share": 3.82,
+    "ai": 40110,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-15",
+    "share": 3.87,
+    "ai": 40635,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-16",
+    "share": 3.87,
+    "ai": 40635,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-17",
+    "share": 3.88,
+    "ai": 40740,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-18",
+    "share": 3.81,
+    "ai": 40005,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-19",
+    "share": 3.87,
+    "ai": 40635,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-20",
+    "share": 3.87,
+    "ai": 40635,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-21",
+    "share": 3.83,
+    "ai": 40215,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-22",
+    "share": 3.92,
+    "ai": 41160,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-23",
+    "share": 3.95,
+    "ai": 41475,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-24",
+    "share": 3.9,
+    "ai": 40950,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-25",
+    "share": 4.0,
+    "ai": 42000,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-26",
+    "share": 3.97,
+    "ai": 41685,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-27",
+    "share": 4.01,
+    "ai": 42105,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-28",
+    "share": 4.09,
+    "ai": 42945,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-29",
+    "share": 4.1,
+    "ai": 43050,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-30",
+    "share": 4.07,
+    "ai": 42735,
+    "total": 1050000
+   },
+   {
+    "date": "2026-10-31",
+    "share": 4.12,
+    "ai": 43260,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-01",
+    "share": 4.16,
+    "ai": 43680,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-02",
+    "share": 4.17,
+    "ai": 43785,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-03",
+    "share": 4.18,
+    "ai": 43890,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-04",
+    "share": 4.21,
+    "ai": 44205,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-05",
+    "share": 4.26,
+    "ai": 44730,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-06",
+    "share": 4.2,
+    "ai": 44100,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-07",
+    "share": 4.27,
+    "ai": 44835,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-08",
+    "share": 4.26,
+    "ai": 44730,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-09",
+    "share": 4.21,
+    "ai": 44205,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-10",
+    "share": 4.24,
+    "ai": 44520,
+    "total": 1050000
+   },
+   {
+    "date": "2026-11-11",
+    "share": 4.26,
+    "ai": 44730,
+    "total": 1050000
+   }
+  ]
+ }
+}

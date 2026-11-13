@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Labour Pulse</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface-1: #fcfcfb; --surface-2: #f0efec;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7;
+  --accent: #2a78d6; --accent-soft: #cde2fb; --spark: #a9a79f;
+  --good: #0ca30c; --bad: #d03b3b;
+  --glow: rgba(42,120,214,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835;
+    --accent: #3987e5; --accent-soft: #184f95; --spark: #6b6a65;
+    --glow: rgba(57,135,229,.28);
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835;
+  --accent: #3987e5; --accent-soft: #184f95; --spark: #6b6a65;
+  --glow: rgba(57,135,229,.28);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.viz-root { background: var(--page); color: var(--text-primary); padding: 16px; min-height: 100vh; }
+.wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 14px; }
+
+/* ticker */
+.ticker { overflow: hidden; border-radius: 10px; background: var(--surface-1);
+  border: 1px solid var(--grid); white-space: nowrap; font-size: 13px; color: var(--text-secondary); }
+.ticker-track { display: inline-block; padding: 8px 0; animation: scroll 40s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker span { margin: 0 22px; }
+.ticker b { color: var(--text-primary); font-weight: 600; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+header { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; }
+h1 { font-size: 20px; margin: 0; letter-spacing: -.01em; }
+h1 .live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500;
+  color: var(--text-secondary); margin-left: 10px; vertical-align: middle; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); position: relative; }
+.dot::after { content: ""; position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid var(--accent); animation: ping 1.8s ease-out infinite; }
+@keyframes ping { from { transform: scale(.5); opacity: 1; } to { transform: scale(2); opacity: 0; } }
+.meta { font-size: 12px; color: var(--muted); }
+button.link { background: none; border: 1px solid var(--axis); color: var(--text-secondary);
+  border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 12px; cursor: pointer; }
+button.link:hover { color: var(--text-primary); border-color: var(--text-secondary); }
+
+.card { background: var(--surface-1); border: 1px solid var(--grid); border-radius: 14px; padding: 16px; }
+.card h2 { font-size: 13px; font-weight: 600; margin: 0 0 2px; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: .06em; }
+.sub { font-size: 12px; color: var(--muted); margin: 0 0 12px; }
+
+/* AI pulse */
+.pulse { display: grid; grid-template-columns: minmax(200px, 1fr) 2fr; gap: 18px; align-items: center; }
+.hero { font-size: 56px; font-weight: 650; line-height: 1; letter-spacing: -.02em;
+  text-shadow: 0 0 28px var(--glow); }
+.hero small { font-size: 22px; font-weight: 500; color: var(--text-secondary); }
+.hero-note { font-size: 13px; color: var(--text-secondary); margin-top: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.chip { font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--surface-2);
+  color: var(--text-secondary); }
+
+/* regions */
+.regions { display: grid; gap: 6px; margin-top: 14px; }
+.reg { display: grid; grid-template-columns: 170px 1fr 52px; align-items: center; gap: 10px;
+  font-size: 13px; cursor: default; }
+.reg .name { color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reg .track { height: 10px; background: var(--surface-2); border-radius: 0 4px 4px 0; position: relative; }
+.reg .bar { height: 100%; border-radius: 0 4px 4px 0; background: var(--accent);
+  transform-origin: left; animation: grow .9s cubic-bezier(.2,.8,.2,1) both; }
+.reg:hover .bar { filter: brightness(1.15); }
+.reg .val { text-align: right; font-variant-numeric: tabular-nums; }
+@keyframes grow { from { transform: scaleX(0); } }
+
+/* ONS tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.tile { background: var(--surface-2); border-radius: 12px; padding: 12px 12px 8px; position: relative;
+  text-decoration: none; color: inherit; display: block; transition: transform .15s; }
+.tile:hover { transform: translateY(-2px); }
+.tile .label { font-size: 12px; color: var(--text-secondary); }
+.tile .value { font-size: 28px; font-weight: 600; margin: 4px 0 2px; }
+.tile .value small { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+.delta { font-size: 12px; display: inline-flex; gap: 4px; align-items: center; }
+.delta.good .arrow { color: var(--good); } .delta.bad .arrow { color: var(--bad); }
+.delta .txt { color: var(--text-secondary); }
+.period { font-size: 11px; color: var(--muted); }
+svg.spark { width: 100%; display: block; margin-top: 6px; overflow: visible; }
+
+/* tooltip */
+.tip { position: fixed; pointer-events: none; background: var(--text-primary); color: var(--page);
+  font-size: 12px; padding: 6px 8px; border-radius: 6px; opacity: 0; transition: opacity .1s;
+  z-index: 10; white-space: nowrap; }
+.tip.on { opacity: 1; }
+
+.banner { font-size: 12px; padding: 8px 12px; border-radius: 10px; background: var(--surface-2);
+  border: 1px dashed var(--axis); color: var(--text-secondary); }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+td, th { padding: 4px 6px; border-bottom: 1px solid var(--grid); text-align: left; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; }
+footer { font-size: 11px; color: var(--muted); text-align: center; }
+footer a { color: var(--text-secondary); }
+@media (max-width: 620px) {
+  .pulse { grid-template-columns: 1fr; } .reg { grid-template-columns: 120px 1fr 48px; }
+  .hero { font-size: 46px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="viz-root">
+  <div class="wrap" id="app"><p class="meta">Loading the labour market…</p></div>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+const app = document.getElementById("app");
+const tip = document.getElementById("tip");
+const fmt = (v, d = 1) => v.toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d });
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function showTip(e, html) {
+  tip.innerHTML = html; tip.classList.add("on");
+  const x = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px"; tip.style.top = (e.clientY - tip.offsetHeight - 10) + "px";
+}
+const hideTip = () => tip.classList.remove("on");
+
+// Sparkline: de-emphasis line, accent end-dot, crosshair + tooltip on hover.
+function sparkline(host, points, { label, unit, h = 44 }) {
+  const w = Math.max(host.clientWidth, 120), pad = 5;
+  const vals = points.map(p => p.v);
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+  const X = i => pad + (i / Math.max(points.length - 1, 1)) * (w - 2 * pad);
+  const Y = v => h - pad - ((v - lo) / span) * (h - 2 * pad);
+  const d = points.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p.v).toFixed(1)).join("");
+  const last = points.length - 1;
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`); svg.style.height = h + "px";
+  svg.classList.add("spark");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", `${label}: ${points[0].t} ${points[0].v}${unit} to ${points[last].t} ${points[last].v}${unit}`);
+  svg.innerHTML = `
+    <path d="${d}" fill="none" stroke="var(--spark)" stroke-width="2" vector-effect="non-scaling-stroke"
+      stroke-linejoin="round" stroke-linecap="round"/>
+    <line class="xh" y1="0" y2="${h}" stroke="var(--axis)" stroke-width="1" vector-effect="non-scaling-stroke" opacity="0"/>
+    <circle class="hov" r="4" fill="var(--text-primary)" opacity="0"/>
+    <circle cx="${X(last)}" cy="${Y(points[last].v)}" r="4" fill="var(--accent)" stroke="var(--surface-2)" stroke-width="2"/>
+    <rect width="${w}" height="${h}" fill="transparent"/>`;
+  const xh = svg.querySelector(".xh"), hov = svg.querySelector(".hov");
+  svg.addEventListener("mousemove", e => {
+    const r = svg.getBoundingClientRect();
+    const i = Math.round(((e.clientX - r.left) / r.width * w - pad) / (w - 2 * pad) * last);
+    const k = Math.max(0, Math.min(last, i)), p = points[k];
+    xh.setAttribute("x1", X(k)); xh.setAttribute("x2", X(k)); xh.setAttribute("opacity", 1);
+    hov.setAttribute("cx", X(k)); hov.setAttribute("cy", Y(p.v)); hov.setAttribute("opacity", 1);
+    showTip(e, `<b>${esc(p.t)}</b> · ${p.label ?? fmt(p.v, p.d ?? 1) + unit}`);
+  });
+  svg.addEventListener("mouseleave", () => { xh.setAttribute("opacity", 0); hov.setAttribute("opacity", 0); hideTip(); });
+  host.appendChild(svg);
+}
+
+function deltaHTML(s) {
+  if (s.change == null) return "";
+  const up = s.change > 0, flat = s.change === 0;
+  const good = flat ? "" : ((up === (s.good === "up")) ? "good" : "bad");
+  const word = flat ? "unchanged" : (good === "good" ? "better" : "worse");
+  const unit = s.unit === "%" ? " pts" : s.unit;
+  return `<span class="delta ${good}"><span class="arrow" aria-hidden="true">${flat ? "→" : up ? "▲" : "▼"}</span>
+    <span class="txt">${up ? "+" : ""}${fmt(s.change, s.unit === "k" ? 0 : 1)}${unit} on month · ${word}</span></span>`;
+}
+
+function render(data) {
+  const ons = data.ons?.series ?? [], az = data.adzuna;
+  const updated = new Date(data.updated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  let html = "";
+
+  // ticker
+  const items = [];
+  if (az) items.push(`AI-mentioning job ads <b>${fmt(az.share, 2)}%</b>`);
+  ons.forEach(s => items.push(`${esc(s.label)} <b>${fmt(s.latest.value, s.unit === "k" ? 0 : 1)}${s.unit}</b>`));
+  if (data.ons?.next_release) items.push(`Next ONS labour market release <b>${esc(data.ons.next_release)}</b>`);
+  const run = items.map(t => `<span>${t}</span>`).join("");
+  html += `<div class="ticker" aria-hidden="true"><div class="ticker-track">${run}${run}</div></div>`;
+
+  html += `<header><h1>UK Labour Pulse<span class="live"><span class="dot"></span>updated ${esc(updated)}</span></h1>
+    <button class="link" id="tableBtn" aria-expanded="false">Show as table</button></header>`;
+  if (data.sample) html += `<div class="banner">Preview with <b>invented sample numbers</b>. Real ONS and Adzuna figures appear after the first daily update.</div>`;
+
+  if (az) {
+    html += `<section class="card"><h2>AI in UK job ads</h2>
+      <p class="sub">Share of live adverts on Adzuna mentioning AI terms. Daily reading.</p>
+      <div class="pulse"><div>
+        <div class="hero">${fmt(az.share, 2)}<small>%</small></div>
+        <div class="hero-note">${az.ai.toLocaleString("en-GB")} of ${az.total.toLocaleString("en-GB")} ads</div>
+        <div class="chips">${az.terms.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+      </div><div id="azSpark"></div></div>
+      <div class="regions" id="regions"></div></section>`;
+  }
+  html += `<section class="card"><h2>Headline labour market</h2>
+    <p class="sub">ONS Labour Market Statistics, last 3 years.${data.ons?.next_release ? " Next release " + esc(data.ons.next_release) + "." : ""}</p>
+    <div class="tiles" id="tiles"></div></section>
+    <section class="card" id="tableCard" hidden><h2>Data table</h2><div id="tables"></div></section>
+    <footer>Data: <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener">ONS</a>
+      ${az ? `· <a href="https://www.adzuna.co.uk" target="_blank" rel="noopener">Adzuna</a>` : ""}
+      · built by Ben Etheridge, University of Essex</footer>`;
+  app.innerHTML = html;
+
+  // AI sparkline + regions
+  if (az) {
+    if (az.history.length > 1) {
+      const pts = az.history.map(h => ({ t: new Date(h.date).toLocaleDateString("en-GB", { day: "numeric", month: "short" }), v: h.share, d: 2 }));
+      sparkline(document.getElementById("azSpark"), pts, { label: "AI ad share", unit: "%", h: 90 });
+    } else {
+      document.getElementById("azSpark").innerHTML = `<p class="sub">The trend line fills in as daily readings accumulate.</p>`;
+    }
+    const max = Math.max(...az.regions.map(r => r.share));
+    const reg = document.getElementById("regions");
+    az.regions.forEach((r, i) => {
+      const row = document.createElement("div");
+      row.className = "reg";
+      row.innerHTML = `<span class="name">${esc(r.name)}</span>
+        <span class="track"><span class="bar" style="display:block;width:${(r.share / max * 100).toFixed(1)}%;animation-delay:${i * 40}ms"></span></span>
+        <span class="val">${fmt(r.share, 1)}%</span>`;
+      row.addEventListener("mousemove", e => showTip(e, `<b>${esc(r.name)}</b> · ${r.ai.toLocaleString("en-GB")} of ${r.total.toLocaleString("en-GB")} ads`));
+      row.addEventListener("mouseleave", hideTip);
+      reg.appendChild(row);
+    });
+  }
+
+  // ONS tiles
+  const tiles = document.getElementById("tiles");
+  ons.forEach(s => {
+    const d = s.unit === "k" ? 0 : 1;
+    const a = document.createElement("a");
+    a.className = "tile"; a.href = s.source; a.target = "_blank"; a.rel = "noopener";
+    a.innerHTML = `<div class="label">${esc(s.label)}</div>
+      <div class="value">${fmt(s.latest.value, d)}<small>${s.unit === "k" ? "k" : "%"}</small></div>
+      ${deltaHTML(s)}<div class="period">${esc(s.latest.period)}</div>`;
+    tiles.appendChild(a);
+    const host = document.createElement("div"); a.appendChild(host);
+    sparkline(host, s.history.map(p => ({ t: p.period, v: p.value, d })), { label: s.label, unit: s.unit });
+  });
+
+  // table view
+  let t = `<table><tr><th>Series</th><th>Period</th><th class="n">Value</th><th class="n">Change</th></tr>`;
+  ons.forEach(s => t += `<tr><td>${esc(s.label)}</td><td>${esc(s.latest.period)}</td><td class="n">${s.latest.value}${s.unit}</td><td class="n">${s.change ?? ""}</td></tr>`);
+  t += `</table>`;
+  if (az) {
+    t += `<br><table><tr><th>Region</th><th class="n">AI ads</th><th class="n">All ads</th><th class="n">Share</th></tr>`;
+    az.regions.forEach(r => t += `<tr><td>${esc(r.name)}</td><td class="n">${r.ai.toLocaleString("en-GB")}</td><td class="n">${r.total.toLocaleString("en-GB")}</td><td class="n">${r.share}%</td></tr>`);
+    t += `</table>`;
+  }
+  document.getElementById("tables").innerHTML = t;
+  const btn = document.getElementById("tableBtn"), card = document.getElementById("tableCard");
+  btn.onclick = () => { card.hidden = !card.hidden; btn.setAttribute("aria-expanded", !card.hidden);
+    btn.textContent = card.hidden ? "Show as table" : "Hide table"; };
+}
+
+// Load data.json (cache-busted so the daily update shows immediately)
+(window.__DATA__ ? Promise.resolve(window.__DATA__)
+  : fetch("data.json?t=" + Date.now()).then(r => { if (!r.ok) throw r.status; return r.json(); }))
+  .then(d => { render(d); let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => render(d), 200); }); })
+  .catch(err => { app.innerHTML = `<p class="meta">Couldn't load data (${esc(err)}).</p>`; });
+</script>
+</body>
+</html>
